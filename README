@@ -1,0 +1,48 @@
+Self Balancing Inverted Pendulum
+*************************************************************
+PARTS:
+
+  Controller: Arduino Uno
+  Accel/Gyro: MPU-6050
+       Motor: single 67:1 metal gear motor with 64CPR encoder 
+Motor Driver: TB6612FNG
+
+*************************************************************
+PLAN:
+
+***MPU-6050***
+1. setting adjustments
+	a. verify that the settings such as range, self test, onboard processing etc. are what we need for the project
+2. calibration test 
+	a. mount the sensor to one of the lab calibrators and check the output
+3. wiring interrupts
+	a. see if we can use the "data ready" interrupt, or whether we even want to use that feature
+
+***MOTOR***
+1. sequential counter circuit for the encoder inputs
+	a. from John's textbook, wire the circuit and interface with the Arduino
+2. motor speed and torque capabilities
+	a. is the motor going to be fast enough to adjust the pedulum in time?
+
+***MOTOR DRIVER***
+1. wiring and testing for functionality
+	a. need to control speed and direction
+
+***CHASSIS***
+1. motor-to-wheel coupling
+	a. drive vs. idler wheels
+2. size and weight of pendulum to optimize motor capabilities
+3. pin joint for pendulum pole
+4. sensor placement
+
+***CONTROL sYSTEM***
+1. conceptual design
+2. coding
+3. optimization 
+	a. needs to be fast, and small in size (Uno has 32k flash and 2k SRAM memory)
+
+***DOCUMENTATION***
+1. data sheets for all hardware
+2. schematics for all hardware
+3. block diagrams hardware and software (control sys)
+4. GitHub Wiki?
