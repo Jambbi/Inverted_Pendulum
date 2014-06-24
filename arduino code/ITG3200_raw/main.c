@@ -47,9 +47,11 @@ uint8_t uart_getchar(void);
 static FILE mystdout = FDEV_SETUP_STREAM(uart_putchar, NULL, _FDEV_SETUP_WRITE);
 void delay_ms(uint16_t x);
 
+
+
 int main(void)
 {
-	char temp;
+ 	char temp;
 	unsigned int i = 0;
 	int average = 1;
 	unsigned short sample = 128;
@@ -359,7 +361,7 @@ void ioinit (void)
     DDRD = 0b11111010; //PORTD (RX on PD0)
 	PORTC = 0b00110000; //pullups on the I2C bus
 	//sbi(PORTD, 2);
-	UART_Init(8);	// U2X0 is set! - 115200bps @ 8MHz
+	UART_Init(16);	// U2X0 is set! - 115200bps @ 8MHz
 }
 
 void UART_Init(unsigned int ubrr)
