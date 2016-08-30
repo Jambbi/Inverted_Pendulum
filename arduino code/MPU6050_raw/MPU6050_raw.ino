@@ -1,9 +1,10 @@
 // #include <helper_3dmath.h>
 #include <MPU6050.h>
+#include <I2Cdev.h>
 // #include <MPU6050_6Axis_MotionApps20.h>
 // #include <MPU6050_9Axis_MotionApps41.h>
 
-#include <I2Cdev.h>
+
 
 // I2C device class (I2Cdev) demonstration Arduino sketch for MPU6050 class
 // 10/7/2011 by Jeff Rowberg <jeff@rowberg.net>
@@ -70,7 +71,7 @@ int16_t gx, gy, gz;
 // binary, one right after the other. This is very fast (as fast as possible
 // without compression or data loss), and easy to parse, but impossible to read
 // for a human.
-//#define OUTPUT_BINARY_ACCELGYRO
+// #define OUTPUT_BINARY_ACCELGYRO
 
 
 #define LED_PIN 13
